@@ -1,9 +1,9 @@
 def bubble_sort(array)
   (array.size - 1).times do
-    array.each_with_index.map do |item, index|
+    array.each_with_index do |item, index|
       if (((index + 1) < (array.size)) && (item > array[index + 1]))
         array[index + 1] += array[index]
-        array[index] = array[index + 1] - item
+        array[index] = array[index + 1] - array[index]
         array[index + 1]  -= array[index]
       end
     end
